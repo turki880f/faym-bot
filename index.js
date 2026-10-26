@@ -128,7 +128,7 @@ client.on('guildMemberAdd', async member => {
 
     const welcomeEmbed = new EmbedBuilder()
         .setColor('#9b59b6')
-        .setTitle('🔥 أهلاً بك في سيرفر فيم!')
+        .setTitle('🔥 **__اهلاً بك في سيرفر Faym__**!')
         .setDescription(`منور صدقني بتستمع بسيرفر فيم (ممنوع سب الاهل ) وانتظر الحصري`)
         .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
         .setTimestamp();
@@ -260,13 +260,13 @@ client.on('interactionCreate', async interaction => {
             const targetChannel = options.getChannel('الروم');
 
             const menuEmbed = new EmbedBuilder()
-                .setColor('#9b59b6')
-                .setTitle('🎮 قسم الألعاب والفعاليات في سيرفر فيم')
-                .setDescription('اختر اللعبة التنافسية أو الفعالية التي تبيها من القائمة بالأسفل، واختبر حظك لكسب العملات! 🔥');
+                .setColor('#fd00d3')
+                .setTitle('🎮  **__قسم الألعاب والفعاليات في سيرفر فيم__**')
+                .setDescription(' **__اختر اللعبة التنافسية أو الفعالية التي تبيها من القائمة بالأسفل، واختبر حظك لكسب العملات__**! 🔥');
 
             const gamesMenu = new StringSelectMenuBuilder()
                 .setCustomId('games_select_menu')
-                .setPlaceholder('...اختر اللعبة أو الفعالية')
+                .setPlaceholder('...**__اختر اللعبة أو الفعالية__**')
                 .addOptions([
                     { label: 'لعبة الروليت', description: 'راهن بلونك المفضل وضاعف عملاتك (أحمر، أسود، أخضر)', value: 'play_roulette', emoji: '🎰' },
                     { label: 'ملك أو كتابة', description: 'تحدي سريع لطرد الحظ (ملك أو كتابة)', value: 'play_coinflip', emoji: '🪙' },
@@ -524,4 +524,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.login('MTU2Mzc1NzA1NDg4NjE1ODQ3Ng.GYSKFS.Ncckk-VCfUSbE5Jh7DLMxWeKVY8ci3K1Mpa9cc');
+client.login(process.env.DISCORD_TOKEN);
